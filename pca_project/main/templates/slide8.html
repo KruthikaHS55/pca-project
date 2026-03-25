@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PCA Analysis</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #020617;
+            color: white;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #22c55e;
+            margin-bottom: 40px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* LEFT */
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #22c55e;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+        }
+
+        /* RIGHT */
+        .bars {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bar {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .bar-label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .progress {
+            background: #111827;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 20px;
+            background: #22c55e;
+            width: 0;
+            animation: fill 2s forwards;
+        }
+
+        @keyframes fill {
+            from { width: 0; }
+        }
+
+        /* FINAL RESULT */
+        .final {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            color: #4ade80;
+        }
+
+        /* NAV */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Principal Component Analysis</h1>
+
+<div class="layout">
+
+    <!-- LEFT -->
+    <div class="info">
+
+        <div class="card">
+            <h3>Standardization</h3>
+            <p>Data normalized before PCA</p>
+        </div>
+
+        <div class="card">
+            <h3>Dimensionality Reduction</h3>
+            <p>Reduced features into 4 components</p>
+        </div>
+
+        <div class="card">
+            <h3>Purpose</h3>
+            <p>Simplifies high-dimensional data</p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="bars">
+
+        <div class="bar">
+            <div class="bar-label">PC1 — 54.82%</div>
+            <div class="progress">
+                <div class="progress-fill" style="width:54.82%"></div>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="bar-label">PC2 — 19.60%</div>
+            <div class="progress">
+                <div class="progress-fill" style="width:19.60%"></div>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="bar-label">PC3 — 15.76%</div>
+            <div class="progress">
+                <div class="progress-fill" style="width:15.76%"></div>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="bar-label">PC4 — 5.69%</div>
+            <div class="progress">
+                <div class="progress-fill" style="width:5.69%"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="final">
+    ✅ Total Variance Retained ≈ <strong>95.86%</strong>
+</div>
+
+<div class="nav">
+    <a href="/slide7/" class="btn">← Back</a>
+    <a href="/slide9/" class="btn">Next →</a>
+</div>
+
+</body>
+</html>

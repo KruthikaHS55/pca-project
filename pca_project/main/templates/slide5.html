@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pipeline</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0b1120;
+            color: white;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6366f1;
+            margin-bottom: 50px;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #6366f1;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .step {
+            padding: 20px 30px;
+            position: relative;
+            width: 50%;
+        }
+
+        .step.left {
+            left: 0;
+        }
+
+        .step.right {
+            left: 50%;
+        }
+
+        .content {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .content:hover {
+            transform: scale(1.05);
+            border-color: #6366f1;
+        }
+
+        .step::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background: #6366f1;
+            border-radius: 50%;
+            top: 25px;
+            z-index: 1;
+        }
+
+        .step.right::before {
+            left: -8px;
+        }
+
+        .content h3 {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        /* NAV */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #6366f1;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Log Analysis Pipeline</h1>
+
+<div class="timeline">
+
+    <div class="step left"><div class="content"><h3>Load Dataset</h3></div></div>
+    <div class="step right"><div class="content"><h3>Fix Encoding Issues</h3></div></div>
+    <div class="step left"><div class="content"><h3>Remove Duplicates</h3></div></div>
+    <div class="step right"><div class="content"><h3>Check Missing Values</h3></div></div>
+    <div class="step left"><div class="content"><h3>Remove No-Variance Columns</h3></div></div>
+    <div class="step right"><div class="content"><h3>Statistical Summary</h3></div></div>
+    <div class="step left"><div class="content"><h3>Correlation Analysis</h3></div></div>
+    <div class="step right"><div class="content"><h3>Covariance Matrix</h3></div></div>
+    <div class="step left"><div class="content"><h3>Z-Score Detection</h3></div></div>
+    <div class="step right"><div class="content"><h3>PCA Preparation</h3></div></div>
+    <div class="step left"><div class="content"><h3>Apply PCA</h3></div></div>
+    <div class="step right"><div class="content"><h3>Visualization</h3></div></div>
+
+</div>
+
+<div class="nav">
+    <a href="/slide4/" class="btn">← Back</a>
+    <a href="/slide6/" class="btn">Next →</a>
+</div>
+
+</body>
+</html>

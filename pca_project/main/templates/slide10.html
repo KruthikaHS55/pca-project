@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conclusion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #020617);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #a5b4fc;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: left;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(79,70,229,0.15);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #c7d2fe;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #d1d5db;
+        }
+
+        /* FINAL LINE */
+        .final {
+            margin-top: 40px;
+            font-size: 18px;
+            color: #22c55e;
+            font-weight: 500;
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #4F46E5;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #3730A3;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">Project Conclusion</div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Data Cleaning</h3>
+            <p>Successfully processed and cleaned raw log dataset</p>
+        </div>
+
+        <div class="card">
+            <h3>Anomaly Detection</h3>
+            <p>Identified abnormal patterns using Z-score method</p>
+        </div>
+
+        <div class="card">
+            <h3>Dimensionality Reduction</h3>
+            <p>Reduced complex data into 4 principal components</p>
+        </div>
+
+        <div class="card">
+            <h3>High Variance Retention</h3>
+            <p>Maintained ~96% information after PCA</p>
+        </div>
+
+        <div class="card">
+            <h3>Feature Insights</h3>
+            <p>Detected most influential sensor features</p>
+        </div>
+
+        <div class="card">
+            <h3>System Understanding</h3>
+            <p>Revealed hidden relationships in system behavior</p>
+        </div>
+
+    </div>
+
+    <div class="final">
+        🚀 Efficient, Scalable & Insightful Log Analysis System Built Successfully
+    </div>
+
+    <button class="btn" onclick="window.location.href='/'">
+        Back to Login
+    </button>
+
+</div>
+
+</body>
+</html>
