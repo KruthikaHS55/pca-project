@@ -44,29 +44,31 @@
             margin-top: 15px;
         }
 
-        button {
+        .btn {
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #6366f1;
             border: none;
             color: white;
             border-radius: 6px;
             cursor: pointer;
+            font-size: 16px;
         }
 
-        .next {
-            display: block;
-            text-align: center;
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
             margin-top: 40px;
         }
 
-        .next a {
+        .nav-buttons a {
+            text-decoration: none;
             background: #6366f1;
             padding: 10px 20px;
-            color: white;
-            text-decoration: none;
             border-radius: 6px;
+            color: white;
         }
+
     </style>
 </head>
 
@@ -86,15 +88,25 @@
     <div class="upload-box">
         <h3>Upload Log Dataset (CSV)</h3>
 
-        <form method="POST" enctype="multipart/form-data">
+        <!-- RUN ANALYSIS -->
+        <form action="{% url 'run_pca' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <input type="file" name="file">
+            <input type="file" name="csv_file" required>
             <br>
-            <button type="submit">Upload</button>
+            <button class="btn" type="submit">🚀 Run Analysis</button>
         </form>
+
+        <!-- NEXT BUTTON (SEPARATE) -->
+        <div style="margin-top:20px;">
+            <a href="/slide3/">
+                <button class="btn">Next →</button>
+            </a>
+        </div>
     </div>
 
-    <div class="next">
+    <!-- NAVIGATION -->
+    <div class="nav-buttons">
+        <a href="/slide1/">⬅ Back</a>
         <a href="/slide3/">Next →</a>
     </div>
 

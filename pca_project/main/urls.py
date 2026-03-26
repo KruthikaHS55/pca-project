@@ -1,6 +1,11 @@
 from django.urls import path
 from . import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
 urlpatterns = [
     path('', views.login_view, name='login'),
     path('slide1/', views.slide1, name='slide1'),
@@ -13,5 +18,11 @@ urlpatterns = [
     path('slide8/', views.slide8, name='slide8'),
     path('slide9/', views.slide9, name='slide9'),  
     path('slide10/', views.slide10, name='slide10'),    
+
+
+
+
+    
+     path('run/', views.run_pca, name='run_pca'),
   
 ]
